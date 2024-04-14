@@ -7,7 +7,7 @@ db = client["demo"]
 collection = db["demo"]
 
 for payload in data_stream:
-  print(f"New data received: {payload.value}, sending to MongoDB")
+  print(f"Update data: {payload.value}, sending to MongoDB")
   try:
     collection.insert_one(payload.value)
     print("Data stored in MongoDB!")
