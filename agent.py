@@ -3,8 +3,8 @@ from pymongo.mongo_client import MongoClient
 
 uri = "mongodb+srv://miguel:md3IwUQKZg10fqNf@demo.ga9t9gq.mongodb.net/?retryWrites=true&w=majority&appName=yc-demo"
 client = MongoClient(uri)
-db = client["yc_demo"]
-collection = db["yc_demo"]
+db = client["demo"]
+collection = db["demo"]
 
 for payload in data_stream:
   print(f"New data received: {payload.value}, sending to MongoDB")
